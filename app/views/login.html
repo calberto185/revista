@@ -1,0 +1,59 @@
+<div layout="column" layout-align="center center" flex>
+	
+ <!--  <md-toolbar>
+    <div class="md-toolbar-tools">
+      <md-button md-no-ink ng-click="loginOpcion('login')">Login</md-button>
+      <span flex></span>
+      <md-button md-no-ink ng-click="loginOpcion('createuser')">Registrar</md-button>
+    </div>
+  </md-toolbar> -->
+  <div layout="row" layout-padding layout-margin layout-align="center stretch" layout-sm="column" layout-xs="column" flex="" class="login">
+    <form  name="form" ng-submit="SignIn()" ng-style="Sign">
+      <div layout="column">
+        <md-input-container>
+          <label>Email</label>
+          <input ng-model="user.email" type="email" name="email" required>
+          <div ng-show="">
+            <span ng-show="">campo obligatorio</span>
+            <span ng-show="">Email invalido</span>
+          </div>
+        </md-input-container>
+        <md-input-container>
+          <label>Password</label>
+          <input ng-model="user.password" type="password" name="password" required>
+          <div ng-show="">
+            <span ng-show="">campo obligatorio</span>
+            <span ng-show="">Email invalido</span>
+          </div>
+        </md-input-container>
+        <md-button class="md-primary" type="submit">Entrar</md-button>
+      </div>
+    </form>
+    <form  name="form" ng-submit="CreateUser()" class="disabled" ng-style="Create">
+      <div layout="column">
+        <md-input-container>
+          <label>Email</label>
+          <input ng-model="user.email" type="email" name="email" required>
+          <div ng-show="">
+            <span ng-show="">campo obligatorio</span>
+            <span ng-show="">Email invalido</span>
+          </div>
+        </md-input-container>
+        <md-input-container>
+          <label>Password</label>
+          <input ng-model="user.password" type="password" name="password" required>
+          <div ng-show="">
+            <span ng-show="">campo obligatorio</span>
+            <span ng-show="">Email invalido</span>
+          </div>
+        </md-input-container>
+        <md-button class="md-primary" type="submit">Enviar</md-button>
+      </div>
+    </form>
+    <div layout="column" flex="" ng-hide="loginOpcion.state">
+      <span>Tambien puedes iniciar sesion con:</span>
+      <md-button class="md-raised md-primary">Facebook</md-button>
+      <md-button class="md-raised md-accent">Google</md-button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,62 @@
+<div layout="column" md-scroll-y flex > 
+  <div layout="column" layout-align="center stretch" flex ng-bloak=""  style="height: calc(100vh - 10vh); background-image: url('images/font.jpg'); background-position: center center; background-size: 110vw 100vh; background-repeat: no-repeat;" flex md-whiteframe="3">
+      <div layout="column" layout-align="center stretch" flex style="padding-left: 15vw; padding-right: 15vw;">
+        <form layout="column" layout-align="center stretch" flex >
+          <div layout="column" layout-align="center stretch" flex>
+            <input class="search" type="text" name="Buscar" placeholder="Buscar Pencionistas, Alquiler de Cuartos.">
+            <md-button  class="md-icon-button" aria-label="More" ng-click="login()" style="top:-45px;">
+              <ng-md-icon icon="search" style="fill: #757575" size="33" layout="row" layout-align="end center"></ng-md-icon>
+            </md-button>
+            
+          </div>
+        </form>
+      <!--   <md-input-container>
+          <label>Buscar Pencionistas, Alquiler de Cuartos</label>
+          <input type="text" name="Buscar">
+        </md-input-container> -->
+      </div>
+  </div>
+  <div layout="column" layout-wrap flex>
+    <div layout="column" layout-align="center center" flex layout-padding layout-margin>
+      <span class="md-title">Nuestros Servicios y Productos</span>
+    </div>
+      <div layout="row" layout-align="space-around center" layout-wrap flex layout-margin>
+        <div ng-repeat="cliente in collection" class="client" ng-click="details(cliente)">
+
+          <div layout="row" layout-align="space-between none" flex style="background-image: url('{{cliente.image}}'); background-size: 100% 100%; width: 384px; height: 216px;" >
+            <div flex>
+              <ng-md-icon ng-show="cliente.type == 'Restaurant'" icon="restaurant" style="fill: #fff; background-color: #FF5252; border-radius: 2px; padding: 2px;" size="18"></ng-md-icon>
+              <ng-md-icon ng-show="cliente.type == 'Alquiler'" icon="notifications_active
+
+" style="fill: #fff; background-color: #FF5252; border-radius: 2px; padding: 2px;" size="18"></ng-md-icon>
+            </div>
+            <div flex></div>
+          </div>
+
+          <!-- <div layout="row" layout-align="center center" flex style="background-image: url('{{cliente.image}}'); background-size: 100% 100%; width: 384px; height: 216px;" >
+              <md-button  class="md-icon-button" aria-label="More" ng-click="login()">
+                <ng-md-icon icon="visibility" style="fill: #757575" size="33" layout="row" layout-align="end center"></ng-md-icon>
+              </md-button>
+          </div> -->
+
+          <div layout="row" layout-align="space-between center" flex layout-margin>
+            <p class="md-body-1" style="padding: 10px;">{{cliente.name}}</p>
+            <div flex="nogrow">
+              <md-button  class="md-icon-button" aria-label="More" ng-click="login('cliente')">
+                <ng-md-icon icon="favorite_border" style="fill: #757575" size="33" layout="row" layout-align="end center"></ng-md-icon>
+              </md-button>
+            </div>
+          </div>
+          <div layout="row" layout-align="center center" layout-padding class="client description">
+            <span class="md-caption">{{cliente.description}}</span>
+          </div>
+        </div>
+      </div>
+  </div>
+  <div layout="column" layout-wrap flex style="border-top: 1px #c9c9c9 solid;">
+    <div layout="row" layout-sm="column" layout-xs="column"  layout-align="space-around center" flex layout-padding>
+      <span class="md-caption">Contacto: carlosvm1829@gmail.com / Movil: 931282702</span>
+      <span class="md-caption">Desarrollado de Corazón ConFé - 2017</span>
+    </div>
+  </div>
+</div>
